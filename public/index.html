@@ -10,15 +10,22 @@
   <header>
     <p class="header-title">TASK BOARD</p>
     <div>
-      <button class="button-add">+</button>
+      <button id="button-add">+</button>
       <p class="header-paragraph">ADD TASK</p>
     </div>
   </header>
   <main>
+    <section id="overlay" class="overlay">
+      <div class="popup-card">
+          <input type="text" id="popupInput" placeholder="Enter text">
+          <button id="addButton">Add</button>
+          <button id="button-close">Close</button>
+      </div>
+    </section>
     <section class="board-grid js-render-page">
       <div class="card"><h1>Todo</h1><p>wash car</p></div>
     </section>
   </main>
-  <script src="renderPage.js"></script>
+  <script src="renderPage.js" type="module"></script>
 </body>
 </html>
