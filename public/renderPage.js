@@ -1,3 +1,5 @@
+import {displayError,clearError} from './scripts/validateImput.js';
+
 const todoList = JSON.parse(localStorage.getItem('todoList')) || [];
 
 renderPage();
@@ -24,6 +26,7 @@ document.getElementById('button-add').addEventListener('click', () => {
 // Event listener for close button
 document.getElementById('button-close').addEventListener('click', () => {
   document.getElementById('overlay').style.display = 'none';
+  clearError();
 });
 
 // Event listener for addTodoCard button
@@ -35,6 +38,10 @@ document.getElementById('addButton').addEventListener('click', () => {
     console.log(todoList);
     inputElement.value = '';
     document.getElementById('overlay').style.display = 'none';
+    clearError();
     renderPage();
+  }
+  else if (!inputValue){
+    displayError();
   }
 });
