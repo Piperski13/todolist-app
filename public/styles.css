@@ -1,3 +1,67 @@
 body{
-  background-color: aquamarine;
+  background-color: #212121;
 }
+/* header start */
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-paragraph{
+  display: inline-block;
+  margin-left:10px;
+  font-size: 20px;
+}
+.header-title{
+  font-weight: bold;
+  font-size: 30px;
+}
+.header-title,.header-paragraph{
+  color: #FAFAFA;
+}
+/* header end */
+
+/* button add start */
+.button-add {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid #FAFAFA;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+.button-add:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+/* button add end */
+
+/* main and section start */
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.board-grid{
+  display: flex;
+  max-width: 700px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  color: #FAFAFA;
+}
+.card {
+  width: 190px;
+  height: 254px;
+  margin: 10px;
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25)
+ }
+/* main and section end */
