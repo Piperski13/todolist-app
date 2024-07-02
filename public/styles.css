@@ -35,7 +35,6 @@ header{
   cursor: pointer;
   margin: 35px 0;
 }
-
 #button-add:active {
   box-shadow: none;
   transform: translate(3px, 3px);
@@ -50,20 +49,43 @@ main{
 }
 .board-grid{
   display: flex;
-  max-width: 700px;
+  max-width: 1000px;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   color: #FAFAFA;
 }
 .card {
-  width: 190px;
-  height: 254px;
+  width: 35%;
+  height: 50%;
   margin: 10px;
   border-radius: 30px;
   background: #212121;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25)
- }
+  box-shadow: 15px 15px 30px rgb(25, 25, 25);
+}
+.card-footer{
+  margin-top: 36px;
+  margin-bottom: 15px;
+}
+.button-add-card{
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  padding: 5px 13px;
+  border-radius: 30px;
+  border: 2px solid #FAFAFA;
+  background: #252525;
+  box-shadow: 1px 1px #fafafa;
+  cursor: pointer;
+}
+.card-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 5px 15px 0px 15px; 
+}
 /* main and section end */
 
 /* popup add todo style start */
@@ -109,3 +131,51 @@ main{
   margin-bottom: 15px;
 }
 /* error end */
+
+/* delete button start */
+.todo-title{
+  display: inline-block;
+}
+.delete-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  gap: 2px;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.delete-button:hover {
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+  gap: 0;
+}
+
+.bin-top {
+  transform-origin: bottom right;
+}
+.delete-button:hover .bin-top {
+  transition-duration: 0.5s;
+  transform: rotate(160deg);
+}
+/* delete button end */
