@@ -7,12 +7,12 @@ renderPage();
 function renderPage() {
   let todoListHTML = '';
 
-  todoList.forEach(element => {
+  todoList.forEach((element,index) => {
     const html = `
-      <div class="card">
+      <div class="card" id="${index}">
         <div class="card-header">
             <h1 class="todo-title">${element}</h1>
-            <button class="delete-button">
+            <button class="delete-button js-delete-button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -67,6 +67,15 @@ function renderPage() {
 
   document.querySelector('.js-render-page').innerHTML = todoListHTML;
   localStorage.setItem('todoList', JSON.stringify(todoList));
+
+  // Event listener for all delete buttons
+  document.querySelectorAll('.js-delete-button')
+  .forEach((delteButton,index)=>{
+    delteButton.addEventListener('click',()=>{
+      todoList.splice(index,1);
+      renderPage();
+    })
+  });
 }
 
 // Event listener for add button

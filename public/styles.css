@@ -56,16 +56,18 @@ main{
   color: #FAFAFA;
 }
 .card {
-  width: 35%;
-  height: 50%;
+  width: 375px;
+  height: 350px;
   margin: 10px;
   border-radius: 30px;
   background: #212121;
   box-shadow: 15px 15px 30px rgb(25, 25, 25);
+  position: relative;
 }
 .card-footer{
-  margin-top: 36px;
-  margin-bottom: 15px;
+  position: absolute;
+  top:80%;
+  left:45%;
 }
 .button-add-card{
   font-family: monospace;
@@ -82,7 +84,7 @@ main{
 .card-header{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 20px;
   padding: 5px 15px 0px 15px; 
 }
